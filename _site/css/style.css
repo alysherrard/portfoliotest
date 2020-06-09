@@ -18,9 +18,6 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -36,6 +33,13 @@ body {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+html {
+  background: url("/assets/images/gradientbg.jpg") no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  font: normal 18px "Roboto", Helvetica, sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
