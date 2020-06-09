@@ -3,11 +3,11 @@
 # note: will result in an all-in-one-file stylesheet e.g. style.css
 #   in _config.yml add:
 #     sass:
-#       sass_dir: css
+#       sass_dir: partials
 #       style:    expanded
 ---
 
-@import
+/*@import
 "reset",
 "variables";
 
@@ -16,8 +16,4 @@
 "layout",
 "background",
 "header",
-"work";
-
-/*
- * css styles go here
- */
+"work";*/
