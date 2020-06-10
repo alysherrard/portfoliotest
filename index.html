@@ -4,16 +4,29 @@ title:  Portfolio
 ---
 
 
-<h1>Hi, I'm <span class="intro-callout">aly</span></h1>
-<h2>{{ site.subtitle }}</h2>
-<p>I'm a self-proclaimed UX unicorn. Although I do enjoy rainbows and sparkles,
-  I have more than just glitter to back it up. I have stellar frontend development skills including
-  HTML5, CSS, Sass, JavaScript, Django, and Git.
-  On top of all that, I'm a fully-trained graphic designer who has spent years improving her UX skills.
-  I have experience with persona mapping, wireframing, low-fi and hi-fi prototyping, and user testing.
-  Whew!! That's a lot! I've had about 10 years to build up that skills list, and I'm proud
-  to say that I'm continuing to add to it.</p>
-<p>Want to know more about me? <a href="{% link _content/arencounter.html %}">Let's chat!</a></p>
+
+
+
+<div class="grid-wrap-main">
+     <div class="grid-section-a">
+       <div class="grid-wrap-secondary">
+            <div class="grid-section-1"><h1>Hi, I'm <span class="intro-callout">aly</span></h1></div>
+            <div class="grid-section-2"></div>
+            <div class="grid-section-3"><p>I'm a self-proclaimed UX unicorn. Although I do enjoy rainbows and sparkles,
+						  I have more than just glitter to back it up.</p></div>
+       </div>
+     </div>
+     <div class="grid-section-b">
+			 <h2>{{ site.subtitle }}</h2>
+       <p>I have stellar frontend development skills including
+       HTML5, CSS, Sass, JavaScript, Django, and Git.
+       On top of all that, I'm a fully-trained graphic designer who has spent years improving her UX skills.
+       I have experience with persona mapping, wireframing, low-fi and hi-fi prototyping, and user testing.</p>
+       <p>Whew!! That's a lot! I've had about 10 years to build up that skills list, and I'm proud
+       to say that I'm continuing to add to it.</p>
+       <p>Want to know more about me? <a href="{% link _content/arencounter.html %}">Let's chat!</a></p>
+     </div>
+</div>
 
 
 <!--<div class="work__grid">
