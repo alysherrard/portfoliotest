@@ -9,23 +9,108 @@ html{
 
 //index styles
 
-.grid-wrap-main{
+.grid-wrapper{
 	margin: 1em;
-	padding: 1em;
+	padding: 2em;
 	border: 5px solid;
-}
+	//border-color:radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+  //             radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+
+	display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
+
+	h1{
+		font-size: 4em;
+		grid-column: 1 / span 6;
+		grid-row: 1;
+	}
+	h2{
+		color: rgba($color-white, .3);
+		font-size: 2.5em;
+		grid-column: 1;
+		grid-row: 3;
+		justify-self: start;
+		writing-mode: vertical-rl;
+	}
+	img{
+		width: 100%;
+		grid-column: 1 / span 6;
+		grid-row: 2;
+		z-index: -1;
+	}
+	p.bio{
+		grid-column: 1 / span 6;
+		grid-row: 4;
+		text-align: right;
+		align-self: end;
+	}
+	.skills{
+		grid-column: 1 / span 6;
+		grid-row: 5 / span 2;
+		align-self: end;
+	}
+
+}//end grid-wrapper
+
+
 
 @media screen and (min-width: 768px){
-	.grid-wrap-main{
+	.grid-wrapper{
+		max-height: calc(100vh - 6em);
 		margin: 3em;
 		padding: 3em;
+		h1{
+	    grid-column: 1 / span 2;
+	    grid-row: 1 / span 2;
+		}
+		h2{
+	    grid-column: 4;
+	    grid-row: 1 / span 6;
+		}
+		img{
+			grid-column: 2 / span 2;
+	    grid-row: 1 / span 4;
+		}
+		p.bio{
+			grid-column: 1 / span 1;
+	    grid-row: 3 / span 2;
+			text-align: left;
+		}
+		.skills{
+			grid-column: 5 / span 2;
+	    grid-row: 4 / span 3;
+		}
 	}
 }
 
 @media screen and (min-width: 1440px){
-	.grid-wrap-main{
+	.grid-wrapper{
+		max-height: calc(100vh - 8em);
 		margin: 4em;
 		padding: 4em;
+		h1{
+	    grid-column: 1 / span 2;
+	    grid-row: 1 / span 2;
+		}
+		h2{
+	    grid-column: 4;
+	    grid-row: 1 / span 6;
+		}
+		img{
+			grid-column: 2 / span 2;
+	    grid-row: 1 / span 4;
+		}
+		p.bio{
+			grid-column: 1 / span 1;
+	    grid-row: 3 / span 2;
+			text-align: left;
+		}
+		.skills{
+			grid-column: 5 / span 2;
+	    grid-row: 4 / span 3;
+		}
 	}
 }
 
