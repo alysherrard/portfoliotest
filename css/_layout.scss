@@ -7,15 +7,13 @@ html{
 }
 
 .header{
-	width: 100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-  grid-template-rows: 4em;
+	height: 6em;
 	padding: 1em;
-	img{
-		grid-column: 1;
-		grid-row: 1;
-		height: 100%;
+	a.logo-link{
+		text-decoration: none;
+		img{
+			height: 100%;
+		}
 	}
 }
 
@@ -26,7 +24,7 @@ html{
 
 .home-grid-wrapper{
 	width: 100%;
-	max-width: 850px;
+	max-width: 900px;
 	margin: 1em auto;
 	padding: 1em;
 	display: grid;
@@ -151,7 +149,7 @@ html{
 
 @media (min-width: 600px){
 	.home-grid-wrapper{
-		padding: 3em;
+		padding: 1em 3em;
 	  grid-template-columns: 1fr 1fr 1fr 1fr;
 		.shape-2{
 			display: block;
@@ -170,13 +168,19 @@ html{
 
 @media (min-width: 768px){
 	.home-grid-wrapper{
-		padding: 5em;
+		padding: 1em 5em;
 	}
 }
 
 @media (min-width: 900px){
 	.home-grid-wrapper{
-		padding: 6em;
+		padding: 2em 6em;
+	}
+	.work-grid{
+		min-height: 3em;
+		&::before{
+	    top: -4em;
+		}
 	}
 }
 
