@@ -31,119 +31,139 @@ html {
   font: normal 18px "Roboto", Helvetica, sans-serif;
 }
 
-.grid-wrapper {
-  margin: 1em;
-  padding: 2em;
-  border: 5px solid;
+.home-grid-wrapper {
+  max-width: 1000px;
+  margin: 1em auto;
+  padding: 1em;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 1em;
+  overflow: hidden;
 }
 
-.grid-wrapper h1 {
-  font-size: 4em;
-  grid-column: 1 / span 6;
+.home-grid-wrapper h1 {
+  grid-column: 1 / span 3;
   grid-row: 1;
+  visibility: hidden;
 }
 
-.grid-wrapper h2 {
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 2.5em;
+.home-grid-wrapper h2.intro {
+  width: 1em;
   grid-column: 1;
-  grid-row: 3;
-  justify-self: start;
+  grid-row: 1 / span 3;
   writing-mode: vertical-rl;
+  align-self: end;
+  justify-self: center;
+  color: white;
+  font-size: 3em;
+  font-weight: 300;
 }
 
-.grid-wrapper img {
-  width: 100%;
-  grid-column: 1 / span 6;
-  grid-row: 2;
+.home-grid-wrapper h2.intro-name {
+  grid-column: 2 / span 2;
+  grid-row: 3;
+  align-self: end;
+  color: white;
+  font-family: 'Rozha One', serif;
+  font-size: 7em;
+  margin-bottom: -.2em;
+}
+
+.home-grid-wrapper p {
+  grid-column: 1 / span 3;
+  grid-row: 4 / span 3;
+  align-self: center;
+  color: white;
+  font-size: 1.25em;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+.home-grid-wrapper .line-1 {
+  display: block;
+  background-color: white;
+  height: 100%;
+  width: .5em;
+  grid-column: 1;
+  grid-row: 1 / span 3;
   z-index: -1;
 }
 
-.grid-wrapper p.bio {
-  grid-column: 1 / span 6;
-  grid-row: 4;
-  text-align: right;
-  align-self: end;
-}
-
-.grid-wrapper .skills {
-  grid-column: 1 / span 6;
-  grid-row: 5 / span 2;
-  align-self: end;
-}
-
-@media screen and (min-width: 768px) {
-  .grid-wrapper {
-    max-height: calc(100vh - 6em);
-    margin: 3em;
-    padding: 3em;
-  }
-  .grid-wrapper h1 {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
-  }
-  .grid-wrapper h2 {
-    grid-column: 4;
-    grid-row: 1 / span 6;
-  }
-  .grid-wrapper img {
-    grid-column: 2 / span 2;
-    grid-row: 1 / span 4;
-  }
-  .grid-wrapper p.bio {
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 2;
-    text-align: left;
-  }
-  .grid-wrapper .skills {
-    grid-column: 5 / span 2;
-    grid-row: 4 / span 3;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .grid-wrapper {
-    max-height: calc(100vh - 8em);
-    margin: 4em;
-    padding: 4em;
-  }
-  .grid-wrapper h1 {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
-  }
-  .grid-wrapper h2 {
-    grid-column: 4;
-    grid-row: 1 / span 6;
-  }
-  .grid-wrapper img {
-    grid-column: 2 / span 2;
-    grid-row: 1 / span 4;
-  }
-  .grid-wrapper p.bio {
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 2;
-    text-align: left;
-  }
-  .grid-wrapper .skills {
-    grid-column: 5 / span 2;
-    grid-row: 4 / span 3;
-  }
-}
-
-.grid-wrapper h1 {
-  font-size: 2.5em;
-  font-weight: 300;
-  line-height: 1em;
-}
-
-.grid-wrapper h1 span.intro-callout {
+.home-grid-wrapper .shape-1 {
   display: block;
-  font-family: "Playball", serif;
-  font-size: 4.5em;
+  height: 15em;
+  width: 15em;
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 2;
+  border-radius: 100%;
+  align-self: end;
+  justify-self: right;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  z-index: -1;
+  margin-right: -4em;
+}
+
+.home-grid-wrapper .shape-2 {
+  display: none;
+}
+
+@media (min-width: 375px) {
+  .home-grid-wrapper h2.intro-name {
+    font-size: 9em;
+  }
+}
+
+@media (min-width: 425px) {
+  .home-grid-wrapper {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  .home-grid-wrapper h2.intro, .home-grid-wrapper .line-1 {
+    grid-row: 1 / span 2;
+  }
+  .home-grid-wrapper h2.intro-name {
+    grid-row: 2;
+    font-size: 10em;
+  }
+  .home-grid-wrapper p {
+    grid-row: 3 / span 2;
+  }
+  .home-grid-wrapper .shape-1 {
+    grid-row: 1 / span 2;
+    height: 20em;
+    width: 20em;
+  }
+}
+
+@media (min-width: 600px) {
+  .home-grid-wrapper {
+    padding: 3em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .home-grid-wrapper .shape-2 {
+    display: block;
+    height: 4em;
+    width: 4em;
+    grid-column: 4;
+    grid-row: 3;
+    border-radius: 100%;
+    align-self: start;
+    justify-self: left;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    z-index: -1;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-grid-wrapper {
+    padding: 5em;
+  }
+}
+
+@media (min-width: 900px) {
+  .home-grid-wrapper {
+    padding: 6em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
