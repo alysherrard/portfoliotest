@@ -93,10 +93,6 @@ html {
   grid-column: 1 / span 3;
   grid-row: 4 / span 3;
   align-self: center;
-  color: white;
-  font-size: 1.25em;
-  font-weight: 300;
-  line-height: 1.5em;
 }
 
 .home-grid-wrapper .line-1 {
@@ -173,6 +169,10 @@ html {
 }
 
 @media (min-width: 600px) {
+  .header {
+    height: 8em;
+    padding: 2em;
+  }
   .home-grid-wrapper {
     padding: 1em 3em;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -207,6 +207,13 @@ html {
   .work-grid::before {
     top: -4em;
   }
+}
+
+p {
+  color: white;
+  font-size: 1.25em;
+  font-weight: 300;
+  line-height: 1.5em;
 }
 
 /*# sourceMappingURL=style.css.map */
