@@ -31,7 +31,26 @@ html {
   font: normal 18px "Roboto", Helvetica, sans-serif;
 }
 
+.header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 4em;
+  padding: 1em;
+}
+
+.header img {
+  grid-column: 1;
+  grid-row: 1;
+  height: 100%;
+}
+
+.container {
+  overflow: hidden;
+}
+
 .home-grid-wrapper {
+  width: 100%;
   max-width: 1000px;
   margin: 1em auto;
   padding: 1em;
@@ -106,6 +125,24 @@ html {
 
 .home-grid-wrapper .shape-2 {
   display: none;
+}
+
+.work-grid {
+  position: relative;
+  background-color: white;
+  min-height: 2em;
+}
+
+.work-grid::before {
+  content: ' ';
+  position: absolute;
+  top: -2em;
+  left: -20%;
+  display: block;
+  width: 130%;
+  height: 10em;
+  background-color: white;
+  transform: rotate(-5deg);
 }
 
 @media (min-width: 375px) {

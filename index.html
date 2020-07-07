@@ -6,36 +6,39 @@ title:  Portfolio
 
 
 
+<div class="container">
+	<div class="home-grid-wrapper">
+		<h1>Alyson Sherrard Web Design Portfolio</h1>
+		<h2 class="intro">Hi, my name is</h2>
+		<h2 class="intro-name">aly</h2>
 
-<div class="home-grid-wrapper">
-	<h1>Alyson Sherrard Web Design Portfolio</h1>
-	<h2 class="intro">Hi, my name is</h2>
-	<h2 class="intro-name">aly</h2>
+		<p>
+			I'm a UX designer and frontend developer living in Cincinnati.
+			I think code is just as beautiful as design. I like glitter more than a normal person.
+			Currently researching and writing about being a UX Unicorn. Always looking to learn something new.
+		</p>
 
-	<p>
-		I'm a UX designer and frontend developer living in Cincinnati.
-		I think code is just as beautiful as design. I like glitter more than a normal person.
-		Currently researching and writing about being a UX Unicorn. Always looking to learn something new.
-	</p>
+		<b class="line-1"></b>
+		<b class="shape-1"></b>
+		<b class="shape-2"></b>
+	</div>
 
-	<b class="line-1"></b>
-	<b class="shape-1"></b>
-	<b class="shape-2"></b>
+
+	<div class="work-grid">
+		<!--
+	  {% assign sorted = (site.content | sort: 'order') %}
+	  {% for work in sorted %}
+	    <a href="{{ work.article_path }}" class="card work--{{ work.type }}" {% if work.type == "work" %}{% else %}target="_blank"{% endif %}>
+	      {% if work.type == "article" %}
+	        <h3>{{ work.title }}</h3>
+	      {% else %}
+	      {% endif %}
+	      <div class="work__image">
+	        <p class="work__type">{{ work.type }}</p>
+	      </div>
+	      <img src="{{ work.image }}" alt="{{ work.title }}" />
+	    </a>
+	  {% endfor %}
+		-->
+	</div>
 </div>
-
-
-<!--<div class="work__grid">
-  {% assign sorted = (site.content | sort: 'order') %}
-  {% for work in sorted %}
-    <a href="{{ work.article_path }}" class="card work--{{ work.type }}" {% if work.type == "work" %}{% else %}target="_blank"{% endif %}>
-      {% if work.type == "article" %}
-        <h3>{{ work.title }}</h3>
-      {% else %}
-      {% endif %}
-      <div class="work__image">
-        <p class="work__type">{{ work.type }}</p>
-      </div>
-      <img src="{{ work.image }}" alt="{{ work.title }}" />
-    </a>
-  {% endfor %}
-</div>-->
