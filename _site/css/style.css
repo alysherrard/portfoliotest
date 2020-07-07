@@ -51,7 +51,7 @@ html {
 
 .home-grid-wrapper {
   width: 100%;
-  max-width: 1000px;
+  max-width: 850px;
   margin: 1em auto;
   padding: 1em;
   display: grid;
@@ -69,11 +69,12 @@ html {
 
 .home-grid-wrapper h2.intro {
   width: 1em;
+  margin-left: .5em;
   grid-column: 1;
   grid-row: 1 / span 3;
   writing-mode: vertical-rl;
   align-self: end;
-  justify-self: center;
+  justify-self: left;
   color: white;
   font-size: 3em;
   font-weight: 300;
