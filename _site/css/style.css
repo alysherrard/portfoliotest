@@ -150,20 +150,10 @@ html {
 .work-grid-wrapper .card-work {
   position: relative;
   border: 5px solid #e45fe6;
-  border-radius: 2em;
 }
 
 .work-grid-wrapper .card-work img {
   width: 100%;
-  border-radius: 2em;
-}
-
-.work-grid-wrapper .card-work .overlay-work-info {
-  display: none;
-}
-
-.work-grid-wrapper .card-work:hover .overlay-work-info {
-  display: none;
 }
 
 @media (min-width: 375px) {

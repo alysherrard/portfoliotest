@@ -121,27 +121,8 @@ html{
 	.card-work{
 		position: relative;
 		border: 5px solid $color-pink;
-		border-radius: 2em;
 		img{
 			width: 100%;
-			border-radius: 2em;
-		}
-
-		.overlay-work-info{
-			display: none; //hide work info in default state
-		}
-
-		&:hover{
-			.overlay-work-info{
-				display: block !important; //show work info on hover
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%
-				height: 100%;
-				background-color: rgba($color-dark, .5);
-				color: $color-white;
-			}
 		}
 	}
 }
