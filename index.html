@@ -29,6 +29,10 @@ title:  Portfolio
 	  {% for work in sorted %}
 			<div class="card-work">
 		    <a href="{{ work.article_path }}">
+					<div class="overlay-work-info">
+						<h3>{{ work.title }}</h3>
+						<p>{{ work.subtitle }}</p>
+					</div>
 		      <img src="{{ work.image }}" alt="{{ work.title }}" />
 		    </a>
 			</div>
