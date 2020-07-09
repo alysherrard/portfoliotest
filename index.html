@@ -23,19 +23,20 @@ title:  Portfolio
 		<b class="shape-2"></b>
 	</div>
 
-
-	<div class="work-grid">
-	  {% assign sorted = (site.content | sort: 'order') %}
-	  {% for work in sorted %}
-			<div class="card-work">
-		    <a href="{{ work.article_path }}">
-					<div class="overlay-work-info">
-						<h3>{{ work.title }}</h3>
-						<p>{{ work.subtitle }}</p>
-					</div>
-		      <img src="{{ work.image }}" alt="{{ work.title }}" />
-		    </a>
-			</div>
-	  {% endfor %}
+	<div class="shape-container">
+		<div class="work-grid-wrapper">
+		  {% assign sorted = (site.content | sort: 'order') %}
+		  {% for work in sorted %}
+				<div class="card-work">
+			    <a href="{{ work.article_path }}">
+						<div class="overlay-work-info">
+							<h3>{{ work.title }}</h3>
+							<p>{{ work.subtitle }}</p>
+						</div>
+			      <img src="{{ work.image }}" alt="{{ work.title }}" />
+			    </a>
+				</div>
+		  {% endfor %}
+		</div>
 	</div>
 </div>

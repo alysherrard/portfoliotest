@@ -123,13 +123,14 @@ html {
   display: none;
 }
 
-.work-grid {
+.shape-container {
+  display: block;
+  padding: 1em;
   position: relative;
   background-color: white;
-  min-height: 2em;
 }
 
-.work-grid::before {
+.shape-container::before {
   content: ' ';
   position: absolute;
   top: -2em;
@@ -139,6 +140,30 @@ html {
   height: 10em;
   background-color: white;
   transform: rotate(-5deg);
+  z-index: -1;
+}
+
+.work-grid-wrapper {
+  max-width: 900px;
+}
+
+.work-grid-wrapper .card-work {
+  position: relative;
+  border: 5px solid #e45fe6;
+  border-radius: 2em;
+}
+
+.work-grid-wrapper .card-work img {
+  width: 100%;
+  border-radius: 2em;
+}
+
+.work-grid-wrapper .card-work .overlay-work-info {
+  display: none;
+}
+
+.work-grid-wrapper .card-work:hover .overlay-work-info {
+  display: none;
 }
 
 @media (min-width: 375px) {
@@ -201,10 +226,10 @@ html {
   .home-grid-wrapper {
     padding: 2em 6em;
   }
-  .work-grid {
+  .shape-container {
     min-height: 3em;
   }
-  .work-grid::before {
+  .shape-container::before {
     top: -4em;
   }
 }

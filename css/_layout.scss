@@ -97,10 +97,11 @@ html{
 	}
 }//end home-grid-wrapper
 
-.work-grid{
+.shape-container{
+	display: block;
+	padding: 1em;
 	position: relative;
 	background-color: white;
-	min-height: 2em;
 	&::before{
 		content: ' ';
     position: absolute;
@@ -111,8 +112,43 @@ html{
     height: 10em;
     background-color: white;
     transform: rotate(-5deg);
+		z-index: -1;
 	}
 }
+
+.work-grid-wrapper{
+	max-width: 900px;
+	.card-work{
+		position: relative;
+		border: 5px solid $color-pink;
+		border-radius: 2em;
+		img{
+			width: 100%;
+			border-radius: 2em;
+		}
+
+		.overlay-work-info{
+			display: none; //hide work info in default state
+		}
+
+		&:hover{
+			.overlay-work-info{
+				display: block !important; //show work info on hover
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%
+				height: 100%;
+				background-color: rgba($color-dark, .5);
+				color: $color-white;
+			}
+		}
+	}
+}
+
+
+
+
 
 @media (min-width: 375px){
 	.home-grid-wrapper{
@@ -176,13 +212,15 @@ html{
 	.home-grid-wrapper{
 		padding: 2em 6em;
 	}
-	.work-grid{
+	.shape-container{
 		min-height: 3em;
 		&::before{
 	    top: -4em;
 		}
 	}
 }
+
+
 
 //work styles
 
