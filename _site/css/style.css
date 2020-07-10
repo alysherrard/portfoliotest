@@ -48,7 +48,7 @@ table {
   padding: 1em;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr 1fr auto;
   grid-gap: 1em;
   overflow: hidden;
 }
@@ -228,7 +228,7 @@ table {
   }
   .home-grid-wrapper {
     padding: 1em 3em;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr auto;
   }
   .home-grid-wrapper .shape-2 {
     display: block;
