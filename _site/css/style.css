@@ -24,13 +24,6 @@ table {
   border-spacing: 0;
 }
 
-html {
-  background: url("/assets/images/gradientbg.jpg") no-repeat center;
-  background-attachment: fixed;
-  background-size: cover;
-  font: normal 18px "Roboto", Helvetica, sans-serif;
-}
-
 .header {
   height: 6em;
   padding: 1em;
@@ -63,18 +56,20 @@ html {
 .home-grid-wrapper h1 {
   grid-column: 1 / span 3;
   grid-row: 1;
-  visibility: hidden;
+  display: none;
 }
 
 .home-grid-wrapper h2.intro {
   width: 1em;
   margin-left: .5em;
+  margin-bottom: 0;
   grid-column: 1;
   grid-row: 1 / span 3;
   writing-mode: vertical-rl;
   align-self: end;
   justify-self: left;
   color: white;
+  font-family: 'Roboto', sans-serif;
   font-size: 3em;
   font-weight: 300;
 }
@@ -84,9 +79,10 @@ html {
   grid-row: 3;
   align-self: end;
   color: white;
-  font-family: 'Rozha One', serif;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
   font-size: 7em;
-  margin-bottom: -.2em;
+  margin-bottom: -0.075em;
 }
 
 .home-grid-wrapper p {
@@ -125,9 +121,9 @@ html {
 
 .shape-container {
   display: block;
-  padding: 1em;
+  padding: 2em;
   position: relative;
-  background-color: white;
+  background-color: #eaeaea;
 }
 
 .shape-container::before {
@@ -138,22 +134,64 @@ html {
   display: block;
   width: 130%;
   height: 10em;
-  background-color: white;
+  background-color: #eaeaea;
   transform: rotate(-5deg);
   z-index: -1;
 }
 
 .work-grid-wrapper {
-  max-width: 900px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .work-grid-wrapper .card-work {
+  margin-bottom: 3em;
   position: relative;
-  border: 5px solid #e45fe6;
+  border-radius: 2em;
+  box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.2), -8px -8px 16px 0 rgba(255, 255, 255, 0.9);
 }
 
-.work-grid-wrapper .card-work img {
+.work-grid-wrapper .card-work a {
+  display: block;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.work-grid-wrapper .card-work a img {
+  display: block;
   width: 100%;
+  border-radius: 2em;
+}
+
+.work-grid-wrapper .card-work .work-info {
+  opacity: 0;
+  transition: all .3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(178, 121, 230, 0.9);
+  background: -webkit-linear-gradient(to top right, rgba(228, 95, 230, 0.925), rgba(178, 121, 230, 0.925), rgba(151, 149, 241, 0.925));
+  background: linear-gradient(to top right, rgba(228, 95, 230, 0.925), rgba(178, 121, 230, 0.925), rgba(151, 149, 241, 0.925));
+  border-radius: 2em;
+  color: #FFF;
+  text-align: center;
+}
+
+.work-grid-wrapper .card-work .work-info .text-container {
+  position: absolute;
+  padding: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.work-grid-wrapper .card-work:hover .work-info, .work-grid-wrapper .card-work:focus .work-info, .work-grid-wrapper .card-work:focus-within .work-info {
+  opacity: 1;
 }
 
 @media (min-width: 375px) {
@@ -204,6 +242,21 @@ html {
     border: 3px solid rgba(255, 255, 255, 0.5);
     z-index: -1;
   }
+  .work-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 3em;
+  }
+  .work-grid-wrapper .card-work {
+    margin-bottom: 0;
+  }
+  .work-grid-wrapper .card-work:nth-of-type(odd) {
+    grid-column: 1;
+  }
+  .work-grid-wrapper .card-work:nth-of-type(even) {
+    grid-column: 2;
+  }
 }
 
 @media (min-width: 768px) {
@@ -224,11 +277,116 @@ html {
   }
 }
 
+body {
+  font: normal 18px "Roboto", Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  line-height: 1em;
+  margin-bottom: .5em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.25em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.75em;
+}
+
+h5 {
+  font-size: 1.5em;
+}
+
+h6 {
+  font-size: 1.25em;
+}
+
 p {
   color: white;
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: 300;
   line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 3.25em;
+  }
+  h2 {
+    font-size: 2.75em;
+  }
+  h3 {
+    font-size: 2.5em;
+  }
+  h4 {
+    font-size: 2.25em;
+  }
+  h5 {
+    font-size: 2em;
+  }
+  h6 {
+    font-size: 1.75em;
+  }
+  p {
+    font-size: 1.25em;
+  }
+}
+
+html {
+  background: linear-gradient(226deg, #e45fe6, #b279e6, #9795f1, #77cde0);
+  background-size: 800% 800%;
+  -webkit-animation: gradientShift 12s ease infinite;
+  -moz-animation: gradientShift 12s ease infinite;
+  animation: gradientShift 12s ease infinite;
+}
+
+@-webkit-keyframes gradientShift {
+  0% {
+    background-position: 0% 97%;
+  }
+  50% {
+    background-position: 100% 4%;
+  }
+  100% {
+    background-position: 0% 97%;
+  }
+}
+
+@-moz-keyframes gradientShift {
+  0% {
+    background-position: 0% 97%;
+  }
+  50% {
+    background-position: 100% 4%;
+  }
+  100% {
+    background-position: 0% 97%;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 97%;
+  }
+  50% {
+    background-position: 100% 4%;
+  }
+  100% {
+    background-position: 0% 97%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
