@@ -117,20 +117,18 @@
 .work-grid-wrapper{
 	max-width: 1000px;
 	margin: auto;
-	.card-work{
+	a.card-work{
+		display:block;
 		margin-bottom: 3em;
 		position: relative;
 		border-radius: 2em;
 		box-shadow: 8px 8px 16px 0 rgba($color-dark, .2), -8px -8px 16px 0 rgba($color-white, .9);
-		a{
-			display:block;
-			color: $color-white;
-			text-decoration: none;
-			img{
-				display: block;
-				width: 100%;
-				border-radius: 2em;
-			}
+		color: $color-white;
+		text-decoration: none;
+		img{
+			display: block;
+			width: 100%;
+			border-radius: 2em;
 		}
 		.work-info{
 			opacity: 0; //hide on default
@@ -225,7 +223,7 @@
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto;
 		grid-gap: 3em;
-		.card-work{
+		a.card-work{
 			margin-bottom: 0;
 			&:nth-of-type(odd){
 				grid-column: 1;

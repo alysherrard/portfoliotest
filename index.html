@@ -27,17 +27,15 @@ title:  Portfolio
 		<div class="work-grid-wrapper">
 		  {% assign sorted = site.content | sort: 'order' %}
 		  {% for work in sorted %}
-				<div class="card-work">
-			    <a href="{{ work.article_path }}">
-			      <img src="{{ work.image }}" alt="{{ work.title }}" />
-			    </a>
+				<a class="card-work" href="{{ work.article_path }}">
+			    <img src="{{ work.image }}" alt="{{ work.title }}" />
 					<div class="work-info">
 						<div class="text-container">
-							<h3><a href="{{ work.article_path }}">{{ work.title }}</a></h3>
-							<p><a href="{{ work.article_path }}">{{ work.subtitle }}</a></p>
+							<h3>{{ work.title }}</h3>
+							<p>{{ work.subtitle }}</p>
 						</div>
 					</div>
-				</div>
+				</a>
 		  {% endfor %}
 		</div>
 	</div>
