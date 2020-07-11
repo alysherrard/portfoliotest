@@ -97,6 +97,7 @@
 
 .shape-container{
 	display: block;
+	min-height: calc(100vh - 2em);
 	padding: 2em;
 	position: relative;
 	background-color: $color-gray-light;
@@ -117,7 +118,7 @@
 .work-grid-wrapper{
 	max-width: 1000px;
 	margin: auto;
-	a.card-work{
+	.card-work{
 		display:block;
 		margin-bottom: 3em;
 		position: relative;
@@ -223,7 +224,7 @@
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto;
 		grid-gap: 3em;
-		a.card-work{
+		.card-work{
 			margin-bottom: 0;
 			&:nth-of-type(odd){
 				grid-column: 1;
@@ -247,7 +248,7 @@
 		padding: 2em 6em;
 	}
 	.shape-container{
-		min-height: 3em;
+		min-height: calc(100vh - 8em);
 		&::before{
 	    top: -4em;
 		}
