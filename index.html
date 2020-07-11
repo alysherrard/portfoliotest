@@ -40,3 +40,12 @@ title:  Portfolio
 		</div>
 	</div>
 </div>
+
+<script>
+$('.card-work').click(function (element) {
+    element.preventDefault();
+    var linkPath = this.getAttribute("href");
+
+    setTimeout(function(){ window.location = linkPath; }, 1500);
+});
+</script>
