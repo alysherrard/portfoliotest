@@ -192,6 +192,23 @@ table {
   opacity: 1;
 }
 
+.work-intro {
+  padding: 2em;
+}
+
+.content-work .shape-container {
+  margin-top: 5em;
+}
+
+.content-work .shape-container p {
+  color: #994ede;
+}
+
+.content-work .shape-container .codepen-embed {
+  max-width: 1000px;
+  margin: 4em auto;
+}
+
 @media (min-width: 375px) {
   .home-grid-wrapper h2.intro-name {
     font-size: 9em;
@@ -255,11 +272,17 @@ table {
   .work-grid-wrapper .card-work:nth-of-type(even) {
     grid-column: 2;
   }
+  .work-intro {
+    padding: 3em;
+  }
 }
 
 @media (min-width: 768px) {
   .home-grid-wrapper {
     padding: 1em 5em;
+  }
+  .work-intro {
+    padding: 5em;
   }
 }
 
@@ -272,6 +295,9 @@ table {
   }
   .shape-container::before {
     top: -4em;
+  }
+  .work-intro {
+    padding: 6em;
   }
 }
 

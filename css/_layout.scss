@@ -164,6 +164,25 @@
 	}
 }
 
+//work styles
+
+.work-intro{
+	padding: 2em;
+}
+.content-work .shape-container{
+	margin-top: 5em;
+	p{
+		color: darken($color-purple, 10%);
+	}
+	.codepen-embed {
+    max-width: 1000px;
+    margin: 4em auto;
+	}
+}
+
+//about styles
+
+//contact styles
 
 
 
@@ -235,11 +254,17 @@
 		}
 	}
 
+	.work-intro{
+		padding: 3em;
+	}
 }
 
 @media (min-width: 768px){
 	.home-grid-wrapper{
 		padding: 1em 5em;
+	}
+	.work-intro{
+		padding: 5em;
 	}
 }
 
@@ -253,12 +278,7 @@
 	    top: -4em;
 		}
 	}
+	.work-intro{
+		padding: 6em;
+	}
 }
-
-
-
-//work styles
-
-//about styles
-
-//contact styles
