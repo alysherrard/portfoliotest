@@ -6,6 +6,9 @@
 	padding: 1em;
 	a.logo-link{
 		text-decoration: none;
+		&::before {
+			display: none;  // turn off link underline
+		}
 		img{
 			height: 100%;
 		}
@@ -126,6 +129,9 @@
 		box-shadow: 8px 8px 16px 0 rgba($color-dark, .2), -8px -8px 16px 0 rgba($color-white, .9);
 		color: $color-white;
 		text-decoration: none;
+		&::before {
+			display: none; // turn off link underline
+		}
 		img{
 			display: block;
 			width: 100%;
@@ -153,6 +159,10 @@
 			  -webkit-transform: translate(-50%,-50%);
 			      -ms-transform: translate(-50%,-50%);
 			          transform: translate(-50%,-50%);
+				h3{
+					font-family: 'Playfair Display', serif;
+					margin-bottom: .5em;
+				}
 			}
 		}
 
